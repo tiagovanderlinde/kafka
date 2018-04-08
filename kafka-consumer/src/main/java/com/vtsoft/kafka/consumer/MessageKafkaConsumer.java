@@ -21,8 +21,8 @@ public class MessageKafkaConsumer {
 
 	private Properties createConsumerProperties() {
 		Properties properties = new Properties();
-		properties.put("bootstrap.servers", "localhost:9092");
-		properties.put("group.id", "teste");
+		properties.put("bootstrap.servers", "localhost:9092,localhost:9093");
+		properties.put("group.id", "test-topic");
 		properties.put("enable.auto.commit", "false");
 		properties.put("session.timeout.ms", "30000");
 		properties.put("auto.offset.reset", "earliest");
